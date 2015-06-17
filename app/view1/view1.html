@@ -1,1 +1,17 @@
 <p>This is the partial for view 1.</p>
+<p>Use a capture variable for <code>this</code> when using the <code>controllerAs</code> syntax.
+    Choose a consistent variable name such as <code>vm</code>, which stands for ViewModel.</p>
+<p>
+    Read more from <b>Angular Style Guide</b> by John Papa <br/>
+    <a href="https://github.com/johnpapa/angular-styleguide">https://github.com/johnpapa/angular-styleguide</a>
+</p>
+<div>
+    <table>
+        <tr data-ng-repeat="person in vm.persons"
+            data-ng-click="vm.setActivePerson(person)">
+            <td>{{ person.firstname }}</td>
+            <td>{{ person.lastname }}</td>
+        </tr>
+    </table>
+</div>
+<p>Active: {{ vm.activePerson.firstname + ' ' + vm.activePerson.lastname }}</p>
