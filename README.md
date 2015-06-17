@@ -9,6 +9,11 @@ framework and a bunch of development and testing tools for instant web developme
 
 The seed app doesn't do much, just shows how to wire two controllers and views together.
 
+## Following John Papa's Angular Style Guide
+
+This fork will provide a little mode advanced app skeleton, using the most popular AngularJS modules.
+It will try to follow John Papa's Angular Style Guide in https://github.com/johnpapa/angular-styleguide
+
 
 ## Getting Started
 
