@@ -10,13 +10,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>My AngularJS App</title>
-    <meta name="description" content="">
+    <title>NYKYSUOMEN SANALISTA</title>
+    <meta name="description" content="KOTIMAISTEN KIELTEN TUTKIMUSKESKUKSEN NYKYSUOMEN SANALISTA">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="superhero.bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
     <link rel="stylesheet" href="app.css">
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
@@ -32,22 +32,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#/view1">Project name</a>
+            <a class="navbar-brand" href="#/view1">KOTIMAISTEN KIELTEN TUTKIMUSKESKUKSEN NYKYSUOMEN SANALISTA</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#/view1">view1</a></li>
-                <li><a href="#/view2">view2</a></li>
+                <li><a href="#/view1">Sanahaku</a></li>
+                <li><a href="#/view2">Hakuhistoria</a></li>
             </ul>
-            <form class="navbar-form navbar-right">
-                <div class="form-group">
-                    <input type="text" placeholder="Email" class="form-control">
-                </div>
-                <div class="form-group">
-                    <input type="password" placeholder="Password" class="form-control">
-                </div>
-                <button type="submit" class="btn btn-success">Sign in</button>
-            </form>
         </div>
         <!--/.navbar-collapse -->
     </div>
@@ -60,8 +51,6 @@
 <div class="container" role="main">
     <div ng-view></div>
 </div>
-
-<div>Angular seed app: v<span app-version></span></div>
 
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
@@ -77,5 +66,6 @@
 <script src="components/version/version.js"></script>
 <script src="components/version/version-directive.js"></script>
 <script src="components/version/interpolate-filter.js"></script>
+<script src="sanalista.js"></script>
 </body>
 </html>
