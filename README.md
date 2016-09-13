@@ -19,6 +19,17 @@ It will try to follow John Papa's Angular Style Guide in https://github.com/john
 
 To get you started you can simply clone the angular-seed repository and install the dependencies:
 
+### module links
+
+http://realfavicongenerator.net/
+
+https://angular-ui.github.io/bootstrap/
+
+http://getbootstrap.com/css/
+
+http://fontawesome.io/examples/
+
+
 ### Prerequisites
 
 You need git to clone the angular-seed repository. You can get git from
