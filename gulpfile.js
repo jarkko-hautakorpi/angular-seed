@@ -80,6 +80,7 @@ var gulp           = require('gulp'),
     cssmin         = require('gulp-cssmin'),
     order          = require('gulp-order'),
     concat         = require('gulp-concat'),
+    gap            = require('gulp-append-prepend'),
     ignore         = require('gulp-ignore'),
     rimraf         = require('gulp-rimraf'),
     templateCache  = require('gulp-angular-templatecache'),
@@ -188,11 +189,13 @@ gulp.task('html', function() {
 ======================================================================*/
 
 gulp.task('less', function () {
-    return gulp.src(config.less.src).pipe(less({
+    return gulp.src(config.less.src)
+    .pipe(less({
       paths: config.less.paths.map(function(p){
-        return path.resolve(__dirname, p);
-      })
+      return path.resolve(__dirname, p);})
     }))
+    .pipe(gap.prependFile(config.vendor.css.prepend))
+    .pipe(gap.appendFile(config.vendor.css.append))
     .pipe(cssmin())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(path.join(config.dest, 'css')));
