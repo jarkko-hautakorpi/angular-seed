@@ -13,7 +13,8 @@ var config = {
   less: {
     src: [
       './app/less/app.less',
-      './app/less/responsive.less'
+      './app/less/responsive.less',
+      './bower_components/font-awesome/font-awesome.less'
     ],
     paths: [
       './app/less',
@@ -35,7 +36,8 @@ var config = {
       prepend: [],
       append: [
         './bower_components/bootstrap/dist/css/bootstrap.css',
-        './bower_components/bootstrap/dist/css/bootstrap-theme.css'
+        './bower_components/bootstrap/dist/css/bootstrap-theme.css',
+        './bower_components/font-awesome/css/font-awesome.css'
       ],
     },
 

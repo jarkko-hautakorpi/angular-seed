@@ -1,18 +1,26 @@
-<p>This is the partial for view 1.</p>
-<p>Use a capture variable for <code>this</code> when using the <code>controllerAs</code> syntax.
-    Choose a consistent variable name such as <code>vm</code>, which stands for ViewModel.</p>
-<p>
-    Read more from <b>Angular Style Guide</b> by John Papa <br/>
-    <a href="https://github.com/johnpapa/angular-styleguide">https://github.com/johnpapa/angular-styleguide</a>
-</p>
-<div>
-    <table>
-        <tr data-ng-repeat="person in vm.persons"
-            data-ng-click="vm.setActivePerson(person)">
-            <td>{{ person.firstname }}</td>
-            <td>{{ person.lastname }}</td>
-        </tr>
-    </table>
+<!-- Main component for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <p>Guess what, </p><h1> {{vm.joke.joke}}</h1>
+  
+  <p>Use a capture variable for <code>this</code> when using the <code>controllerAs</code> syntax.
+      Choose a consistent variable name such as <code>vm</code>, which stands for ViewModel.</p>
+  <p>
+      Read more from <b>Angular Style Guide</b> by John Papa <br/>
+      <a href="https://github.com/johnpapa/angular-styleguide">https://github.com/johnpapa/angular-styleguide</a>
+  </p>
+  <p>
+    <a ng-click="vm.getJoke()" class="btn btn-lg btn-primary" href="#/view1" role="button">Get new joke <i class="fa fa-cloud-download"></i></a>
+  </p>
+  
+  <div>
+      <table class="table table-striped">
+          <tr data-ng-repeat="person in vm.persons"
+              data-ng-click="vm.setActivePerson(person)"
+              class="link">
+              <td>{{ person.firstname }}</td>
+              <td>{{ person.lastname }}</td>
+          </tr>
+      </table>
+  </div>
+  <p>Active: {{ vm.activePerson.firstname + ' ' + vm.activePerson.lastname }}</p>
 </div>
-<p>Active: {{ vm.activePerson.firstname + ' ' + vm.activePerson.lastname }}</p>
-<p>Guess what, <h2> {{vm.joke.joke}}</h2></p>

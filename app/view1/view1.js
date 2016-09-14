@@ -11,8 +11,32 @@ angular.module('myApp.view1', ['ngRoute'])
   .controller('View1Ctrl', function (ChuckNorrisService) {
     var vm = this;
     vm.joke = {};
-    ChuckNorrisService.apiGetNorrisJoke().then(function(response) {
-      console.debug(response);
-      vm.joke = response.data.value;
-    });
+    
+    vm.getJoke = function() {
+      ChuckNorrisService.apiGetNorrisJoke().then(function(response) {
+        console.debug(response);
+        vm.joke = response.data.value;
+      });
+    }
+    
+    vm.activePerson = {};
+    vm.persons = {
+        0: {
+            'firstname': 'John',
+            'lastname': 'Doe'
+        },
+        1: {
+            'firstname': 'Mary',
+            'lastname': 'Jane'
+        },
+        2: {
+            'firstname': 'John',
+            'lastname': 'Papa'
+        }
+    };
+    vm.setActivePerson = function (person) {
+        vm.activePerson = person;
+    }
+    /* Get Chuck Norris joke */
+    vm.getJoke();
   });
